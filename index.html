@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BÁSICOS JAVA SCRIPT</title>
 </head>
+
 <body>
+
     <script>
 
-        function add(a,b){
-            return a+b;
+        function addNoArrow(a, b) {
+            return a + b;
         }
 
         //Convertir función flecha
-        
-        const add = (a,b) => a+b;
+
+        const add = (a, b) => a + b;
+
+        //Función flecha sin parámetros
+
+        const numRandom = () => {
+
+            const numero = Math.ceil(Math.random() * 100);
+            console.log(numero);
+
+        };
+
+        numRandom();
 
     </script>
-    
+
 </body>
+
 </html>
