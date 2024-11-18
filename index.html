@@ -9,6 +9,8 @@
 
 <body>
 
+    <script src="Person.js"></script>
+
     <script>
 
         function addNoArrow(a, b) {
@@ -29,6 +31,13 @@
         };
 
         numRandom();
+
+        //Creamos una instancia de la clase Person
+
+        const persona = new Person("Marta");
+        console.log(persona);
+
+        persona.greet(); //Llamamos a la función greet
 
     </script>
 
