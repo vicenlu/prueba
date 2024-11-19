@@ -113,6 +113,28 @@
       };
 
       parOImpar([4, 8, 9]);
+
+      //CALLBACK 
+
+      //Funció principal
+
+      const procesar = (nombre, imprimirDoble) => {
+
+        imprimirDoble(nombre); //Crida funció callback pasant el nombre com a paràmetre.
+      }
+
+      //Funció Callback
+
+      const imprimirDoble = (nombre) =>{
+        console.log(`El doble de ${nombre} és ${nombre*2}`);
+      }
+
+      //Cridar funció principal
+
+      procesar(5, imprimirDoble);
+      
+
+
     </script>
   </body>
 </html>
