@@ -78,7 +78,7 @@
 
       numBigger(1, 4);
 
-      enlacesOperadorTernario = (numero) => {
+      const enlacesOperadorTernario = (numero) => {
         numero > 0
           ? console.log("El número es positivo")
           : numero < 0
@@ -88,7 +88,7 @@
 
       enlacesOperadorTernario(-4);
 
-      trobarMaxim = (a, b, c) => {
+      const trobarMaxim = (a, b, c) => {
         a > b && a > c
           ? console.log(`${a} és el valor màxim`)
           : b > a && b > c
@@ -98,7 +98,21 @@
           : console.log("Hi ha dos números iguals");
       };
 
-      trobarMaxim(6,4,2);
+      trobarMaxim(6, 4, 2);
+
+      const parOImpar = (arrayNumeros) => {
+
+        let numero;
+
+        for (let i = 0; i < arrayNumeros.length; i++) {
+          numero = arrayNumeros[i];
+          numero % 2 === 0
+            ? console.log(`El número ${numero} és par`)
+            : console.log(`El número ${numero} és impar`);
+        }
+      };
+
+      parOImpar([4, 8, 9]);
     </script>
   </body>
 </html>
