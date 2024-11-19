@@ -53,6 +53,21 @@
         }
 
         printNumbers([2,4,5]);
+
+        //setTimeout --> Ejecutar función despues de "x" segundos. 
+
+        console.log("inicio");
+        setTimeout(() => {
+            console.log("Ejecuntando un setTimeout, se ejecuta una sola vez");
+        }, 3000);
+        console.log("fin");
+
+        /* setInterval(() => {
+        console.log("Ejecutando setInterval, se ejecuta indefinidamente cada cierto intervalo de tiempo");
+        console.log(new Date().toLocaleTimeString());
+        }, 1000) */
+
+
     </script>
 
 </body>
