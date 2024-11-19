@@ -155,6 +155,23 @@
       };
 
       esperarISaludar("Marta", saludar);
+
+      //EJERCICIO 4
+
+      const procesarElements = (array, callback) => {
+        
+        let elemento;
+
+        for (let i = 0; i < array.length; i++) {
+          callback(array[i]); //Llama a la función callback con cada elemento del array.
+        }
+      };
+
+      const callback = (elemento) => {
+        console.log(`Procesando ${elemento}`);
+      };
+
+      procesarElements([1, 2, 3], callback);
     </script>
   </body>
 </html>
