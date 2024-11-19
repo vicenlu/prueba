@@ -140,8 +140,21 @@
         console.log(`La suma total és ${num1 + num2}`);
       };
 
-      calculadora(5,8, sumaNum);
+      calculadora(5, 8, sumaNum);
 
+      //EJERCICIO 3
+
+      const esperarISaludar = (nom, saludar) => {
+        setTimeout(() => {
+          saludar(nom); //Invoca la función callback con el nombre despues de 2 segundos
+        }, 2000);
+      };
+
+      const saludar = (nom) => {
+        console.log(`Hola ${nom}`);
+      };
+
+      esperarISaludar("Marta", saludar);
     </script>
   </body>
 </html>
