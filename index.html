@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BÁSICOS JAVA SCRIPT</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <script src="Person.js"></script>
 
     <script>
+      function addNoArrow(a, b) {
+        return a + b;
+      }
 
-        function addNoArrow(a, b) {
-            return a + b;
+      //Convertir función flecha
+
+      const add = (a, b) => a + b;
+
+      //Función flecha sin parámetros
+
+      const numRandom = () => {
+        const numero = Math.ceil(Math.random() * 100);
+        console.log(numero);
+      };
+
+      numRandom();
+
+      //Creamos una instancia de la clase Person
+
+      const persona = new Person("Marta");
+      console.log(persona);
+
+      persona.greet(); //Llamamos a la función greet
+
+      //Funcion flecha dentro de un loop
+
+      const printNumbers = (arrayNumeros) => {
+        let numero;
+
+        for (let i = 0; i < arrayNumeros.length; i++) {
+          numero = arrayNumeros[i];
+          console.log(numero);
         }
+      };
 
-        //Convertir función flecha
+      printNumbers([2, 4, 5]);
 
-        const add = (a, b) => a + b;
+      //setTimeout --> Ejecutar función despues de "x" segundos.
 
-        //Función flecha sin parámetros
+      console.log("inicio");
+      setTimeout(() => {
+        console.log("Ejecuntando un setTimeout, se ejecuta una sola vez");
+      }, 3000);
+      console.log("fin");
 
-        const numRandom = () => {
-
-            const numero = Math.ceil(Math.random() * 100);
-            console.log(numero);
-
-        };
-
-        numRandom();
-
-        //Creamos una instancia de la clase Person
-
-        const persona = new Person("Marta");
-        console.log(persona);
-
-        persona.greet(); //Llamamos a la función greet
-
-        //Funcion flecha dentro de un loop
-
-        const printNumbers = (arrayNumeros) => {
-
-            let numero;
-
-            for(let i=0; i<arrayNumeros.length; i++){
-                numero = arrayNumeros[i];
-                console.log(numero);
-            }
-            
-        }
-
-        printNumbers([2,4,5]);
-
-        //setTimeout --> Ejecutar función despues de "x" segundos. 
-
-        console.log("inicio");
-        setTimeout(() => {
-            console.log("Ejecuntando un setTimeout, se ejecuta una sola vez");
-        }, 3000);
-        console.log("fin");
-
-        /* setInterval(() => {
+      /* setInterval(() => {
         console.log("Ejecutando setInterval, se ejecuta indefinidamente cada cierto intervalo de tiempo");
         console.log(new Date().toLocaleTimeString());
         }, 1000) */
 
-        //EJERCICIOS OPERADOR TERNARIO
+      //EJERCICIOS OPERADOR TERNARIO
 
-        const potConduir = (edat) =>{
+      const potConduir = (edat) => {
+        edat >= 18
+          ? console.log("La persona pot conduir")
+          : console.log("La persona NO pot conduir");
+      };
 
-            edat >= 18
-            ?console.log("La persona pot conduir")
-            :console.log("La persona NO pot conduir");
-        }
+      potConduir(19);
 
-        potConduir(19);
+      const numBigger = (num1, num2) => {
+        num1 > num2
+          ? console.log("Num 1 és més gran")
+          : console.log("Num 2 és més gran");
+      };
 
-        const numBigger = (num1,num2) => {
+      numBigger(1, 4);
 
-            num1>num2
-            ?console.log("Num 1 és més gran")
-            :console.log("Num 2 és més gran");
-        }
-        
-        numBigger(1,4);
+      enlacesOperadorTernario = (numero) => {
+        numero > 0
+          ? console.log("El número es positivo")
+          : numero < 0
+          ? console.log("El número és negativo")
+          : console.log("El número és 0");
+      };
 
+      enlacesOperadorTernario(-4);
+
+      trobarMaxim = (a, b, c) => {
+        a > b && a > c
+          ? console.log(`${a} és el valor màxim`)
+          : b > a && b > c
+          ? console.log(`${b} és el valor màxim`)
+          : c > a && c > b
+          ? console.log(`${c} és el valor màxim`)
+          : console.log("Hi ha dos números iguals");
+      };
+
+      trobarMaxim(6,4,2);
     </script>
-
-</body>
-
+  </body>
 </html>
