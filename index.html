@@ -39,6 +39,20 @@
 
         persona.greet(); //Llamamos a la función greet
 
+        //Funcion flecha dentro de un loop
+
+        const printNumbers = (arrayNumeros) => {
+
+            let numero;
+
+            for(let i=0; i<arrayNumeros.length; i++){
+                numero = arrayNumeros[i];
+                console.log(numero);
+            }
+            
+        }
+
+        printNumbers([2,4,5]);
     </script>
 
 </body>
