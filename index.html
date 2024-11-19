@@ -159,7 +159,6 @@
       //EJERCICIO 4
 
       const procesarElements = (array, callback) => {
-        
         let elemento;
 
         for (let i = 0; i < array.length; i++) {
@@ -172,6 +171,22 @@
       };
 
       procesarElements([1, 2, 3], callback);
+
+      //EJERCICIO 5
+
+      const procesarCadena = (cadena, functionCallback) => {
+        let cadenaMajuscules;
+
+        cadenaMajuscules = cadena.toUpperCase();
+        functionCallback(cadenaMajuscules);
+      };
+
+      const functionCallback = (cadenaMajuscules) => {
+        console.log(`La cadena en majúscules es: ${cadenaMajuscules}`);
+      };
+
+      procesarCadena("Hola em dic Marta", functionCallback);
+      
     </script>
   </body>
 </html>
