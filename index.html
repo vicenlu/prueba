@@ -313,6 +313,22 @@
         }, 0);
 
       console.log(resultat());
+
+      //Ejercicio 6
+
+      const arr = [11, 12, 13, 14];
+
+      const someBigger = arr.some((num) => {
+        return num > 10;
+      });
+
+      console.log("Hi ha algún número major a 10..?", someBigger);
+
+      const everyBigger = arr.every((num) => {
+        return num > 10;
+      });
+
+      console.log("Tots els números són majors a 10..?", everyBigger);
     </script>
   </body>
 </html>
