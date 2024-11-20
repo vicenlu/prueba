@@ -267,23 +267,34 @@
 
       //Ejercicio 1
 
-      const array1 = [1,2,3,4];
+      const array1 = [1, 2, 3, 4];
 
       const array2 = array1.map((num) => {
-        return num*2
+        return num * 2;
       });
 
       console.log(array2);
 
       //Ejercicio 2
-      
-      const totalNum = [1,2,3,4];
+
+      const totalNum = [1, 2, 3, 4];
 
       const evenNum = totalNum.filter((num) => {
-        return num % 2 === 0
-      })
+        return num % 2 === 0;
+      });
 
       console.log("Even numbers: ", evenNum);
+
+      //Ejercicio 3
+
+      const num = [1, 10, 8, 11];
+
+      const findNum = num.find((num) => {
+        return num > 10;
+      });
+
+      console.log("First number bigger than 10..", findNum);
+ 
     </script>
   </body>
 </html>
