@@ -219,11 +219,23 @@
       };
 
       const copiedUser = { ...user };
-      copiedUser.age = 33;
+      copiedUser.age = 33; //Modificamos la edad del copiedUser sin que afecte al user. 
 
       console.log("Copied user using SPREAD operator:", copiedUser);
       console.log("Original user object:", user);
-      
+
+      //Ejercicio 4
+
+      const colors = ["red", "green", "blue", "yellow", "black"];
+      const [firstColor, secondColor, ...extraColors] = colors;
+
+      console.log(firstColor);
+      console.log(secondColor);
+      console.log(extraColors);
+
+
+
+
     </script>
   </body>
 </html>
