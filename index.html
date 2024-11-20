@@ -380,6 +380,25 @@
         if (numeros === 5) break;
         console.log(numeros);
       }
+
+      //Ejercicio 6
+
+      const personas = ["Anna", "Bernat", "Clara"];
+
+      let index = 0;
+      for (const persona of personas) {
+        console.log(`Index: ${index}, Persona: ${persona}`);
+        index++;
+      }
+
+      //Ejercicio 6 - con entries() - iterador (índice-valor) para cada elemento del array. 
+
+      const personas1 = ["Anna", "Bernat", "Clara"];
+
+      for (const persona of personas1.entries()) {
+        console.log(persona);
+      }
+      
     </script>
   </body>
 </html>
