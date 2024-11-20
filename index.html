@@ -244,6 +244,25 @@
       }
 
       displayHobbies(...arrayHobbies); //Utilizamos SPREAD para pasar cada elemento (individualmente) del array cómo un elemento
+    
+    //Ejercicio 6
+
+    const object1 = {
+      name: "Marta",
+      age: 29,
+      hobbies: ["travel","read"],
+      studies: "Developer",
+    };
+
+    const object2 = {
+      city: "Barcelona",
+      country: "Spain",
+    };
+
+    const mergeObjects = {...object1,...object2};
+
+    console.log("The combined object is..", mergeObjects);
+
     </script>
   </body>
 </html>
