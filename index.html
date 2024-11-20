@@ -244,25 +244,36 @@
       }
 
       displayHobbies(...arrayHobbies); //Utilizamos SPREAD para pasar cada elemento (individualmente) del array cómo un elemento
-    
-    //Ejercicio 6
 
-    const object1 = {
-      name: "Marta",
-      age: 29,
-      hobbies: ["travel","read"],
-      studies: "Developer",
-    };
+      //Ejercicio 6
 
-    const object2 = {
-      city: "Barcelona",
-      country: "Spain",
-    };
+      const object1 = {
+        name: "Marta",
+        age: 29,
+        hobbies: ["travel", "read"],
+        studies: "Developer",
+      };
 
-    const mergeObjects = {...object1,...object2};
+      const object2 = {
+        city: "Barcelona",
+        country: "Spain",
+      };
 
-    console.log("The combined object is..", mergeObjects);
+      const mergeObjects = { ...object1, ...object2 };
 
+      console.log("The combined object is..", mergeObjects);
+
+      //ARRAY TRANSFORMATIONS
+
+      //Ejercicio 1
+
+      const array1 = [1,2,3,4];
+
+      const array2 = array1.map((num) => {
+        return num*2
+      });
+
+      console.log(array2);
     </script>
   </body>
 </html>
