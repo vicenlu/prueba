@@ -209,6 +209,21 @@
       };
 
       suma(1, 2, 3, 4, 5, 6);
+
+      //Ejercicio 3
+
+      const user = {
+        name: "Marta",
+        age: 29,
+        hobbies: ["read", "travel"],
+      };
+
+      const copiedUser = { ...user };
+      copiedUser.age = 33;
+
+      console.log("Copied user using SPREAD operator:", copiedUser);
+      console.log("Original user object:", user);
+      
     </script>
   </body>
 </html>
