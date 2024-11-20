@@ -219,7 +219,7 @@
       };
 
       const copiedUser = { ...user };
-      copiedUser.age = 33; //Modificamos la edad del copiedUser sin que afecte al user. 
+      copiedUser.age = 33; //Modificamos la edad del copiedUser sin que afecte al user.
 
       console.log("Copied user using SPREAD operator:", copiedUser);
       console.log("Original user object:", user);
@@ -233,9 +233,17 @@
       console.log(secondColor);
       console.log(extraColors);
 
+      //Ejercicio 5
 
+      const arrayHobbies = ["travel", "eat", "read"];
 
+      function displayHobbies([hobbie1, hobbie2, hobbie3]) {
+        console.log(`Hobbie 1: ${hobbie1}`);
+        console.log(`Hobbie 2: ${hobbie2}`);
+        console.log(`Hobbie 3: ${hobbie3}`);
+      }
 
+      displayHobbies(...arrayHobbies); //Utilizamos SPREAD para pasar cada elemento (individualmente) del array cómo un elemento
     </script>
   </body>
 </html>
