@@ -468,6 +468,30 @@
       };
 
       funcionAsincrona();
+
+      //Ejercicio 5
+
+      const promesaRetraso5 = (string) => {
+        if (string !== "Hola món") {
+          return Promise.reject(`No es correcto`);
+        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Hola món");
+          }, 2000);
+        });
+      };
+
+      const funcionAsincrona2 = async () => {
+        try {
+          let string = await promesaRetraso5("Hola"); //Coge catch ya que solo le enviamos "Hola"
+          console.log(string);
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      funcionAsincrona2();
     </script>
   </body>
 </html>
