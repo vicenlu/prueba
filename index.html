@@ -421,11 +421,28 @@
         });
       };
 
-      promesaRetraso2()
-      .then((resultat) => {
+      promesaRetraso2().then((resultat) => {
         return console.log(resultat);
       });
 
+      //Ejercicio 3
+
+      const promesaRetraso3 = (string) => { //Si función no recibe "Hola", dará error
+        if (string !== "Hola") {
+          return Promise.reject(`No es correcto`);
+        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve();
+          }, 2000);
+        });
+      };
+
+      promesaRetraso3("Hol") 
+          .then(() => {
+            return console.log("Hola");
+          })
+          .catch((err) => console.error(err));
     </script>
   </body>
 </html>
