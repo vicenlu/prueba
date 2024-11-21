@@ -492,6 +492,47 @@
       };
 
       funcionAsincrona2();
+
+      //Ejercicio 6 - Prommise.all
+
+      const promesaRetraso6 = (string) => {
+        if (string !== "Executing function 1") {
+          return Promise.reject("Error function 1");
+        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Function 1 executed");
+          }, 2000);
+        });
+      };
+
+      const promesaRetraso7 = (string) => {
+        if (string !== "Executing function 2") {
+          return Promise.reject("Error function 2");
+        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Function 2 executed");
+          }, 3000);
+        });
+      };
+
+      //Promise.all --> Ambas funciones se ejecuten a la
+
+      Promise.all([
+        promesaRetraso6("Executing function 1"),
+        promesaRetraso7("Executing function 2"),
+      ])
+        .then((results) => {
+          console.log("Both functions executed");
+          results.forEach((result, index, array) => {
+            console.log(result);
+          });
+        })
+
+        .catch((err) => {
+          console.error("Promise.all failed ", err);
+        });
     </script>
   </body>
 </html>
