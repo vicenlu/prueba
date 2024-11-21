@@ -56,9 +56,9 @@
       console.log("fin");
 
       /* setInterval(() => {
-        console.log("Ejecutando setInterval, se ejecuta indefinidamente cada cierto intervalo de tiempo");
-        console.log(new Date().toLocaleTimeString());
-        }, 1000) */
+          console.log("Ejecutando setInterval, se ejecuta indefinidamente cada cierto intervalo de tiempo");
+          console.log(new Date().toLocaleTimeString());
+          }, 1000) */
 
       //EJERCICIOS OPERADOR TERNARIO
 
@@ -427,7 +427,8 @@
 
       //Ejercicio 3
 
-      const promesaRetraso3 = (string) => { //Si función no recibe "Hola", dará error
+      const promesaRetraso3 = (string) => {
+        //Si función no recibe "Hola", dará error
         if (string !== "Hola") {
           return Promise.reject(`No es correcto`);
         }
@@ -438,11 +439,35 @@
         });
       };
 
-      promesaRetraso3("Hol") 
-          .then(() => {
-            return console.log("Hola");
-          })
-          .catch((err) => console.error(err));
+      promesaRetraso3("Hol")
+        .then(() => {
+          return console.log("Hola");
+        })
+        .catch((err) => console.error(err));
+
+      //Ejercicio 4
+
+      const promesaRetraso4 = (string) => {
+        if (string !== "Hola món") {
+          return Promise.reject(`No es correcto`);
+        }
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Hola món");
+          }, 2000);
+        });
+      };
+
+      const funcionAsincrona = async () => {
+        try {
+          let string = await promesaRetraso4("Hola món");
+          console.log(string); //Imprime el resultado de la promesa (rtdo del resolve)
+        } catch (err) {
+          console.error(err);
+        }
+      };
+
+      funcionAsincrona();
     </script>
   </body>
 </html>
